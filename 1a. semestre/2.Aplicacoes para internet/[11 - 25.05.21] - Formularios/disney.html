@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+	  <meta charset="UTF-8">
+	  <title>Agendamento Disney World</title>
+	  <link rel="stylesheet" type="text/css" href="estilos.css">
+	</head>
+	<body>
+	 <div id="areaInformacoes">
+		<h1>Agendamento de Atividade-Disney World</h1>
+		<form 	action=""
+				method="get"
+				id="frmCadastro">
+			RESORT:
+			<input 	type="text" 
+					size="60"
+					readonly
+					value="Disney World - Orlando">
+			<br>
+			Senha:
+			<input 	type="password"
+					maxlength="10"
+					name="senha">
+			<br>
+			Preenchimento: 1/5
+			<progress max="5" value="1"></progress>
+			<hr>
+			Nome do responsável:
+			<input 	type="text"
+					name="responsavel"
+					maxlength="80"
+					size="80"
+					placeholder="Informe nome completo">
+			<br>
+			<fieldset>
+				<legend>Sexo</legend>
+				<input type="radio" name="sexo" value="M" checked> Masculino
+				<input type="radio" name="sexo" value="F"> Feminino
+			</fieldset>
+			N&ordm; de familiares:
+			<input 	type="number"
+					min="1"
+					max="99"
+					value="1"
+					name="familiares">
+			<br>
+			e-Mail:
+			<input 	type="email"
+					name="email"
+					maxlength="100"
+					size="100"
+					required>
+			<br>
+			<input 	type="checkbox"
+					name="recEmails"
+					value="1"
+					checked> Quero receber e-mails<br>
+			<h3>Acesso ao Parque</h3>			
+			Data da visita:
+			<input 	type="date"
+					name="dataVisita"
+					min="2021-05-25"
+					max="2021-12-31"
+					required>
+			- Hora da Entrada:
+			<input	type="time"
+					name="horaVisita"
+					min="08:00"> <br>
+			Cor da Pulseira:
+			<input 	type="color"
+					name="corPulseira"
+					value="#7F00FF"> <br>
+			Número de atrações a visitar:
+			1 <input	type="range"
+						name="atracoes"
+						min="1"
+						max="10"> 10 <br>
+			Foto da Família:
+			<input	type="file"
+					name="foto"> <br>			
+			<h3>Preferências de Comida</h3>
+			<textarea	name="comida"
+		                placeholder="Insira suas preferências aqui (vegano, carnívoro, etc.)"
+						rows="3"
+						cols="80"></textarea>
+			<hr>				
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Limpar Campos">
+		</form>
+	 </div>
+	</body>
+</html>

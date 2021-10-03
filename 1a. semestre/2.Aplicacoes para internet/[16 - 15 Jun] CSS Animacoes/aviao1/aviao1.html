@@ -1,0 +1,47 @@
+<!DOCTYPE html> <!-- salvar como aviao1.html -->
+<html lang="pt-br"> <!--usado para falar que a pagina usa o portugues brasil-->
+	<head><!-- onde vai todas as configuracoes da pagina-->
+		<title>CSS - Animação Avião 1</title> <!-- O titulo da pagina na parte da aba em cima da url-->
+		<meta charset="utf-8"><!-- usado para falar dos acentos especiais como ç etc.-->
+		<style> /*comando onde diz que estamos utilizando css para estilizar a pagina*/
+			body{
+				background:url(imgs/fundo.jpg);/*colocar a imagem no fundo*/
+				background-size:cover;/*usado para nao repetir ou ficar com tamanho errado na tela do computar e manter sempre a imagem cheia.*/
+				margin:0px; /*tirar todas as margem do body deixar colado com o tamanho da pagina.*/
+			}
+			.aviao{
+				position:relative; /* permitirá animação */
+				width:180px;/*altura do objeto*/
+				left:-180px;/*usado para tirar o aviao da tela*/
+				animation-name:voarDireita;/*usado para criar animao, que vai ser criada*/
+				animation-duration:12s;/*duracao do tempo da animacao */
+				animation-fill-mode: forwards;/*ele mantem a autima coisa que aconteceu, ele nao meche, ele mantem o aviao na tela, e nao faz ele sumir*/  
+			}
+			@keyframes voarDireita{
+				from { left:-600px; top: 700px; width: 600px; } /*o from diz a posciao que eles esta. */
+				to   { left:1920px; top:   0px; width: 80px; }/*e o to dizendo para onde ele vai, e assim fazendo a animacao de andar sobre a tela com essas duas combinacaoes from e to */
+				/* @keyframes usado para criar a animacao para o aviao*/
+				/*com uma left do from esta fora da tela e esta dizendo para ele ir ate o final da tela assim fazendo ele passar no meio da tela da esquerda ate a direita, o top meche com a altura, e o width usado para alterar i tamanho crescendo ou diminuindo no trajeto. */
+			}
+			@keyframes voarDireita2{
+				from { left:-180px; top:   0px; width: 180px; }
+				to   { left:1920px; top: 700px; width: 600px; }
+				
+			}
+			#topo{
+				width:100%;/*altura do objeto pra cima */
+				height:960px;/*largura do objeto, lado*/
+				overflow:hidden;/*usado para nao dar a barra de rolagem para o usuario, ou seja o tamnho fica fixo na tela, nao tem como acompanhar o aviao depois que ele sair da tela*/
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="topo"><!-- um bloco invisivel para estiliar melhor-->
+			<img src="imgs/aviao.png" class="aviao"><!-- img usado para colocar imagens na pagina-->
+		</div>
+		<audio id="musica" controls><!-- usado para implementar audio na pagina, como musicas, barulhos e etc.-->
+			<source src="mp3_89255.mp3" type="audio/mpeg">
+		</audio>
+	</body>
+</html>

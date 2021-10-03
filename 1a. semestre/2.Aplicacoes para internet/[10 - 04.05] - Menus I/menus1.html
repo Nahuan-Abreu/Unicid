@@ -1,0 +1,70 @@
+<!doctype html> <!-- salvar menus1.html -->
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS - Menus</title>	
+		<style>
+			body { 
+				background:url(imgs/gato.jpg);
+				background-size:cover;
+				font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+			} 
+			#menu {
+				/* border:1px solid red; */
+				margin-top:0px;
+				list-style:none;
+				padding:0px;
+				font-size: 26px; 
+			}
+
+			#menu li {
+				background-color:rgb(91,155,213);
+				/* border:1px solid green; */
+				width:160px;
+				display:inline-block;
+				margin-right:15px;
+			}
+
+			#menu a {
+				/* border:1px solid fuchsia; */
+				width:160px;
+				height:50px;
+				display:inline-block;
+				text-align:center;
+				padding-top:20px;
+				border:2px groove navy;
+			}
+
+			#principal {
+				width:800px;
+				margin:auto;
+			}		
+			/* 4 (pseudo-classes) momentos do item de menu */
+			#menu a:link  { 
+                text-decoration:none; color:white;
+            }
+
+			#menu a:visited {
+                color:red;
+            }
+
+			#menu a:hover  { 
+                background-color:orange; color:black;
+            }
+
+			#menu a:active { 
+                background-color:black; color:yellow;
+            }					
+		</style>	
+	</head>
+	<body>
+		<div id="principal">
+			<ul id="menu">
+				<li> <a href="empresa.html">A Empresa</a> </li>
+				<li> <a href="servicos.html">Serviços</a> </li>
+				<li> <a href="produtos.html">Produtos</a> </li>
+				<li> <a href="contato.html">Fale Conosco</a> </li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,94 @@
+// https://www.invertexto.com/qzow25
+
+
+/*
+Operadores Relacionais
+-----------------------
+
+>   maior
+>=  maior ou igual
+<   menor
+<=  menor ou igual 
+==  igual (comparação)
+!=  diferente                        
+
+OBS:     Um sinal de = faz uma atribuição
+Exemplo: med = 9;   
+*/
+
+/*
+1) Leia 2 notas de um aluno.
+Calcular e mostrar a média na tela.
+Informar se o aluno está APROVADO ou REPROVADO, sabendo que a média para aprovação é 6 (seis)
+
+Entrada = ler 2 notas
+Processamento = Calcular a média
+Saída = mostrar a média e a situação
+*/
+
+#include <stdio.h>
+int main(void) 
+{
+  float n1, n2, med;
+  printf ("Digite a primeira nota: ");
+  scanf ("%f",&n1);
+  printf ("Digite a segunda nota: ");
+  scanf ("%f",&n2);
+
+  med = (n1 + n2) / 2;
+  printf ("A média é %.2f",med);
+
+  if (med >= 6)   printf ("\nAPROVADO");
+  else            printf ("\nREPROVADO");
+ 
+  return 0;
+}
+
+//------------------------------------------------------------------------------
+
+/*
+2) Ler DOIS números inteiros.
+   Informar se os números lidos são IGUAIS ou DIFERENTES.
+
+   >   >=   <    <=    ==    !=
+*/
+
+#include <stdio.h>
+int main(void) 
+{
+   int A, B;
+   printf ("Digite o primeiro número: ");
+   scanf ("%d",&A);
+   printf ("Digite o segundo número: ");
+   scanf ("%d",&B);
+
+  if (A == B)   printf ("\nOs números são IGUAIS");
+  else          printf ("\nOs números são DIFERENTES");
+
+  return 0;
+}
+
+//------------------------------------------------------------------------------
+
+/*
+>   <     >=      <=     ==      !=
+
+3) Ler DOIS números inteiros e mostre o MAIOR número lido na tela (ignore a condição de números iguais).
+*/
+
+#include <stdio.h>
+int main(void) 
+{
+   int A, B;
+   printf ("Digite o primeiro número: ");
+   scanf ("%d",&A);
+   printf ("Digite o segundo número: ");
+   scanf ("%d",&B);
+
+  if (A > B)  printf ("O maior número é %d ",A);
+  else        printf ("O maior número é %d ",B);
+
+  return 0;
+}
+
+//------------------------------------------------------------------------------
